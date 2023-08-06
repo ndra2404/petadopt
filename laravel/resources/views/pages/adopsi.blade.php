@@ -4,7 +4,7 @@
     <div class="container container-1370">
         <div class="halo-block-header style-2">
             <h3 class="title">
-                <span class="text">Register</span>
+                <span class="text">Register Adopter</span>
             </h3>
         </div>
         @if (session('status'))
@@ -14,7 +14,7 @@
 @endif
         <div class="halo-block-content product-carousel">
                 <div class="col-12 col-md-6 col-lg-6">
-                        <form method="post" action="{{url('doRegister')}}" accept-charset="UTF-8" class="contact-form">
+                        <form method="post" action="{{url('doAdopsi')}}" accept-charset="UTF-8" class="contact-form">
                             @csrf
                             <input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓">
                             <div class="form-field">
@@ -38,7 +38,7 @@
                                 <input id="password-rg" class="form-input form-input-placeholder" type="password" name="password" aria-required="true" placeholder="" required="">
                             </div>
                             <div class="form-actions" style="margin-top:10px">
-                                <button type="submit" class="button button-1" value="Submit Contact">Create Akun</button>
+                                <button type="submit" class="button button-1" value="Submit Contact">Create akun</button>
                             </div>
                         </form>
                 </div>

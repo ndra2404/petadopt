@@ -64,7 +64,7 @@
                                     <span class="customer-links">Sign In</span>
                                 </a>
                                 @endguest
-                                <a href="javascript:void(0)" class="header__icon header__icon--cart link link-underline focus-inset" id="cart-icon-bubble" data-open-cart-sidebar>
+                                <!-- <a href="javascript:void(0)" class="header__icon header__icon--cart link link-underline focus-inset" id="cart-icon-bubble" data-open-cart-sidebar>
                                     <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                                         <path class="path1" d="M409.6 1024c-56.464 0-102.4-45.936-102.4-102.4s45.936-102.4 102.4-102.4S512 865.136 512 921.6 466.064 1024 409.6 1024zm0-153.6c-28.232 0-51.2 22.968-51.2 51.2s22.968 51.2 51.2 51.2 51.2-22.968 51.2-51.2-22.968-51.2-51.2-51.2z"></path>
                                         <path class="path2" d="M768 1024c-56.464 0-102.4-45.936-102.4-102.4S711.536 819.2 768 819.2s102.4 45.936 102.4 102.4S824.464 1024 768 1024zm0-153.6c-28.232 0-51.2 22.968-51.2 51.2s22.968 51.2 51.2 51.2 51.2-22.968 51.2-51.2-22.968-51.2-51.2-51.2z"></path>
@@ -74,7 +74,7 @@
                                     <div class="cart-count-bubble">
                                         <span class="text-count" aria-hidden="true" data-cart-count="">3</span><span class="visually-hidden">0 items</span>
                                     </div>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -516,9 +516,9 @@
                         <a class="auth-link link link-underline" href="#">
 
                         </a>
-                        <a href="{{url('register')}}" class="button button-1 button-register">
-                                Create account
-                            </a>
+                        <a href="{{url('register')}}" class="button button-1 button-register">Buat akun penjual</a>
+
+                        <a style="margin-top:10px"href="{{url('register/adopsi')}}" class="button button-1 button-register">Buat akun pengadopsi</a>
                     </div>
                 </form>
             </div>

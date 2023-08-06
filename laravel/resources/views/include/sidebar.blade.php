@@ -9,10 +9,12 @@
                             <span class="label sale-label">New</span>
                         </a>
                     </li>
+                    @auth
                     <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
                         <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
                             <span class="text header__active-menu-item">Master Data</span>
                         </a>
+
                         <ul class="header__submenu list-menu list-menu--disclosure list-menu--disclosure-1 caption-large motion-reduce">
                             <li class="menu-lv-item menu-lv-2 text-left  ">
                                 <a href="{{url('animal')}}" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
@@ -24,7 +26,7 @@
                                     <span class="text">Animal Type</span>
                                 </a>
                             </li>
-                            @auth
+
                             @if(Auth::user()->level==1)
                                 <li class="menu-lv-item menu-lv-2 text-left  ">
                                     <a href="{{url('user')}}" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
@@ -32,9 +34,9 @@
                                     </a>
                                 </li>
                             @endif
-                            @endauth
                         </ul>
                     </li>
+                    @if(Auth::user()->level==2)
                     <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
                         <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
                             <span class="text header__active-menu-item">Setting</span>
@@ -47,6 +49,8 @@
                             </li>
                         </ul>
                     </li>
+
+
                     <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
                         <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
                             <span class="text header__active-menu-item">Transaction</span>
@@ -66,9 +70,18 @@
                     </li>
                     <li class="menu-lv-item menu-lv-1 text-left">
                         <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Buy ELLA</span>
+                            <span class="text header__active-menu-item">Animal Catalog</span>
                         </a>
                     </li>
+                    @endif
+                    @endauth
+                    @quest
+                    <li class="menu-lv-item menu-lv-1 text-left">
+                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
+                            <span class="text header__active-menu-item">Animal Catalog</span>
+                        </a>
+                    </li>
+                    @endquest
                 </ul>
             </nav>
         </div>

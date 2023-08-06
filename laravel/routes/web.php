@@ -19,7 +19,9 @@ use App\Http\Controllers\AnimalController;
 
 Route::get('/login', [HomeController::class, 'home'])->name('login');
 Route::get('register', [LoginController::class, 'register'])->name('create.register');
+Route::get('register/adopsi', [LoginController::class, 'adopsi'])->name('create.adopsi');
 Route::post('doRegister', [LoginController::class, 'doRegister'])->name('create.doregister');
+Route::post('doAdopsi', [LoginController::class, 'doAdopsi'])->name('create.doAdopsi');
 Route::post('doLogin', [LoginController::class, 'doLogin'])->name('create.dologin');
 
 Route::group(['middleware' => ['auth']], function () {
