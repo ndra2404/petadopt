@@ -53,6 +53,9 @@ class LoginController extends Controller
             $dataPenjual->nama_lengkap=$request->input('nama_lengkap');
             $dataPenjual->nomor_telepon=$request->input('no_wa');
             $dataPenjual->alamat=$request->input('alamat');
+            $dataPenjual->no_rek=$request->input('no_rek');
+            $dataPenjual->no_rek_nama=$request->input('no_rek_nama');
+
             $dataPenjual->id_user = $user->id;
             $dataPenjual->save();
             DB::commit();

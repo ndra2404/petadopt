@@ -147,6 +147,18 @@
                                         <input type="text" class="form--control" id="username" name="no_wa" placeholder="User Name">
                                      </div>
                                 </div>
+                                <div class="col-sm-6">
+                                     <div class="form-group">
+                                        <label for="username" class="form--label">No Rek</label>
+                                        <input type="text" class="form--control" id="username" name="no_rek" placeholder="User Name">
+                                     </div>
+                                </div>
+                                <div class="col-sm-6">
+                                     <div class="form-group">
+                                        <label for="username" class="form--label">Nama Rekening</label>
+                                        <input type="text" class="form--control" id="username" name="no_rek_nama" placeholder="User Name">
+                                     </div>
+                                </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="email" class="form--label">Email Address</label>
