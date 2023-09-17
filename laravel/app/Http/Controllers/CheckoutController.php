@@ -15,6 +15,9 @@ class CheckoutController extends Controller
 {
     //
     function checkout($id){
+        if(Auth::user()->level!="3"){
+            echo "<script>alert('Silahkan login sebagai pengadopsi');location.href='/';</script>";
+        }
         $ongkir = DB::table('tbl_setting')->where('code','ONGKIR')->first();
         $bank = DB::table('tbl_setting')->where('code','BANK')->first();
         $hewan = DB::table('tbl_hewan')->where('id_hewan',$id)->first();

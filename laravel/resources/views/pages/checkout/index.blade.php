@@ -29,7 +29,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="first-name" class="form--label">Nama<span class="required">*</span></label>
-                                <input type="text" readonly  value="{{$adopter->nama_lengkap}}" class="form--control" id="first-name" >
+                                <input type="text" readonly name="nama_lengkap" value="{{$adopter->nama_lengkap}}" class="form--control" id="first-name" >
                             </div>
                         </div>
                         <div class="col-lg-6">
