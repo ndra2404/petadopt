@@ -141,7 +141,7 @@ class CheckoutController extends Controller
     }
     public function terimaHewan($id,Request $reg){
         if($reg->isMethod('post')){
-            $dataUpdate = CheckoutModel::where('id',$id)->update(['status'=>4]);
+            $dataUpdate = CheckoutModel::where('id',$id)->update(['status'=>5]);
         }
         $notifWa = DB::table('tbl_message')->where('status','4')->first();
         $notifWa = $notifWa->message;
