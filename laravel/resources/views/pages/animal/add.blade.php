@@ -5,11 +5,11 @@
     @csrf
   <div class="form-group">
     <label for="exampleFormControlInput1">Nama hewan</label>
-    <input type="text" name="nama_hewan" class="form-control" id="exampleFormControlInput1" placeholder="Joni">
+    <input type="text" name="nama_hewan" required class="form-control" id="exampleFormControlInput1" placeholder="Joni">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Jenis Hewan</label>
-    <select class="form-control" name="type" id="exampleFormControlSelect1">
+    <select class="form-control" required name="type" id="exampleFormControlSelect1">
         @foreach($types as $type)
         <option value="{{$type->id}}">{{$type->type}}</option>
         @endforeach
@@ -17,11 +17,11 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Ras</label>
-    <input type="text" name="ras" class="form-control" id="exampleFormControlInput1" placeholder="ceper">
+    <input type="text" name="ras" required class="form-control" id="exampleFormControlInput1" placeholder="ceper">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Harga</label>
-    <input type="number" name="harga" class="form-control" id="exampleFormControlInput1" placeholder="100.000">
+    <input type="number" name="harga" required class="form-control" id="exampleFormControlInput1" placeholder="100.000">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Jenis Kelamin</label>
@@ -32,15 +32,15 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlTextarea1">rekam_medis</label>
-    <textarea class="form-control" name="rekam_medis" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" required name="rekam_medis" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Foto</label>
-    <input type="file" name="foto" class="form-control" id="exampleFormControlInput1" >
+    <input type="file" name="foto" required class="form-control" id="exampleFormControlInput1" >
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Bukti Vaksin</label>
-    <input type="file" name="bukti" class="form-control" id="exampleFormControlInput1">
+    <input type="file" required name="bukti" class="form-control" id="exampleFormControlInput1">
   </div>
   <button type="submit" class="btn btn-info">Save</button>
 </form>
