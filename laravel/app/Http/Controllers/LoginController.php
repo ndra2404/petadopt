@@ -20,7 +20,6 @@ class LoginController extends Controller
             'username' => $req->input('email'),
             'password' => $req->input('password'),
         ];
-
         if (Auth::Attempt($data)) {
             return redirect('/');
         }else{
@@ -30,8 +29,8 @@ class LoginController extends Controller
             ]);
         }
     }
-    public function adopsi(){
-        return view('pages.adopsi');
+    public function shopr(){
+        return view('pages.toko');
     }
     public function doLogout()
     {

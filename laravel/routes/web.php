@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MasterDataController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,15 +18,18 @@ use App\Http\Controllers\AnimalController;
 |
 */
 
-Route::get('/login', [HomeController::class, 'home'])->name('login');
-Route::get('register', [LoginController::class, 'register'])->name('create.register');
-Route::get('register/adopsi', [LoginController::class, 'adopsi'])->name('create.adopsi');
+Route::get('/login', [HomeController::class, 'login'])->name('login');
+Route::get('/login-page', [HomeController::class, 'login'])->name('login-page');
+Route::get('/listAnimal', [HomeController::class, 'listAnimal'])->name('listAnimal');
+Route::get('registration', [LoginController::class, 'register'])->name('create.adopsi');
+Route::get('shopr', [LoginController::class, 'shopr'])->name('create.shopr');
 Route::post('doRegister', [LoginController::class, 'doRegister'])->name('create.doregister');
 Route::post('doAdopsi', [LoginController::class, 'doAdopsi'])->name('create.doAdopsi');
 Route::post('doLogin', [LoginController::class, 'doLogin'])->name('create.dologin');
+Route::get('/', [HomeController::class, 'home'])->name('');
 
 Route::group(['middleware' => ['auth']], function () {
-Route::get('/', [HomeController::class, 'home'])->name('');
+
 
 Route::get('doLogout', [LoginController::class, 'doLogout'])->name('create.doLogout');
 
@@ -40,4 +44,16 @@ Route::any('animal/create', [AnimalController::class, 'create'])->name('animal.c
 Route::get('animalType', [MasterDataController::class, 'animalType'])->name('masterData.animalType');
 Route::any('animalType/create', [MasterDataController::class, 'animalType'])->name('masterData.animalType');
 Route::any('animalType/{id}', [MasterDataController::class, 'animalTypeUpdate'])->name('masterData.animalTypeShow');
+
+//Checkout
+Route::get('checkout/{id}', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::post('doCheckout', [CheckoutController::class, 'doCheckout'])->name('checkout.doCheckout');
+Route::get('checkout-list', [CheckoutController::class, 'list'])->name('checkout.list');
+Route::get('checkout-konfirmasi/{id}', [CheckoutController::class, 'konfirmasi'])->name('checkout.konfirmasi');
+Route::post('doKonfirmasi/{id}', [CheckoutController::class, 'doKonfirmasi'])->name('checkout.doKonfirmasi');
+
+Route::get('transaction', [CheckoutController::class, 'transaction'])->name('transaction');
+Route::any('checkout-verification/{id}', [CheckoutController::class, 'verification'])->name('transaction.verification');
+Route::any('checkout-send/{id}', [CheckoutController::class, 'kirimHewan'])->name('transaction.kirimhewan');
+
 });

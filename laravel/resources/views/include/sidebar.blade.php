@@ -1,89 +1,39 @@
-<div class="main-menu">
-    <div class="container container-1370">
-        <div class="header-bottom--wrapper">
-            <nav class="header__inline-menu">
-                <ul class="list-menu list-menu--inline text-left" >
-                    <li class="menu-lv-item menu-lv-1 text-left">
-                        <a href="{{url('')}}" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Home</span>
-                            <span class="label sale-label">New</span>
-                        </a>
-                    </li>
-                    @auth
-                    <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
-                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Master Data</span>
-                        </a>
-
-                        <ul class="header__submenu list-menu list-menu--disclosure list-menu--disclosure-1 caption-large motion-reduce">
-                            <li class="menu-lv-item menu-lv-2 text-left  ">
-                                <a href="{{url('animal')}}" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                    <span class="text">Animal</span>
-                                </a>
-                            </li>
-                            <li class="menu-lv-item menu-lv-2 text-left  ">
-                                <a href="{{url('animalType')}}" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                    <span class="text">Animal Type</span>
-                                </a>
-                            </li>
-
-                            @if(Auth::user()->level==1)
-                                <li class="menu-lv-item menu-lv-2 text-left  ">
-                                    <a href="{{url('user')}}" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                        <span class="text">User</span>
-                                    </a>
-                                </li>
-                            @endif
-                        </ul>
-                    </li>
-                    @if(Auth::user()->level==2)
-                    <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
-                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Setting</span>
-                        </a>
-                        <ul class="header__submenu list-menu list-menu--disclosure list-menu--disclosure-1 caption-large motion-reduce">
-                            <li class="menu-lv-item menu-lv-2 text-left  ">
-                                <a href="blog-default.html" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                    <span class="text">Bank Account</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="menu-lv-item menu-lv-1 text-left no-megamenu dropdown">
-                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Transaction</span>
-                        </a>
-                        <ul class="header__submenu list-menu list-menu--disclosure list-menu--disclosure-1 caption-large motion-reduce">
-                            <li class="menu-lv-item menu-lv-2 text-left  ">
-                                <a href="blog-default.html" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                    <span class="text">New Order</span>
-                                </a>
-                            </li>
-                            <li class="menu-lv-item menu-lv-2 text-left  ">
-                                <a href="blog-with-right-sidebar.html" class="menu-lv-2__action header__menu-item list-menu__item link link link-underline">
-                                    <span class="text">Payment Confirmation</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-lv-item menu-lv-1 text-left">
-                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Animal Catalog</span>
-                        </a>
-                    </li>
-                    @endif
-                    @endauth
-                    @quest
-                    <li class="menu-lv-item menu-lv-1 text-left">
-                        <a href="#" class="menu-lv-1__action header__menu-item list-menu__item link focus-inset menu_mobile_link">
-                            <span class="text header__active-menu-item">Animal Catalog</span>
-                        </a>
-                    </li>
-                    @endquest
-                </ul>
-            </nav>
-        </div>
-    </div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav nav-menu m-auto style-two">
+        <li class="nav-item dropdown">
+            <a class="nav-link" aria-current="page" href="{{url('')}}">Home</a>
+        </li>
+        @auth
+        @if(Auth::user()->level==2)
+        <li class="nav-item">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Master Data <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
+            <ul class="dropdown-menu style-two">
+                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('animal')}}">Animal</a></li>
+                <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('animalType')}}">Animal Type</a></li>
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transaction <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
+            <ul class="dropdown-menu style-two">
+            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('transaction')}}">New Order</a></li>
+            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('bank-setting')}}">Bank Setting</a></li>
+            </ul>
+        </li>
+        @endif
+        @if(Auth::user()->level==3)
+        <li class="nav-item dropdown">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transaction <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
+            <ul class="dropdown-menu style-two">
+            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('checkout-list')}}">My order</a></li>
+            </ul>
+        </li>
+        @endif
+        @endauth
+        <li class="nav-item dropdown">
+            <a class="nav-link" aria-current="page" href="{{url('listAnimal')}}">Animal</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="about.html">About</a>
+        </li>
+    </ul>
 </div>
