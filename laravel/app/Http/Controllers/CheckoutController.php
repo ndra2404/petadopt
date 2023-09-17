@@ -123,7 +123,7 @@ class CheckoutController extends Controller
     }
     public function kirimHewan($id,Request $reg){
         if($reg->isMethod('post')){
-            $dataUpdate = CheckoutModel::where('id',$id)->update(['status'=>4]);
+            $dataUpdate = CheckoutModel::where('id',$id)->update(['status'=>4,'tgl_kirim'=>$reg->post('tgl_kirim')]);
         }
         $notifWa = DB::table('tbl_message')->where('status','4')->first();
         $notifWa = $notifWa->message;
@@ -138,6 +138,24 @@ class CheckoutController extends Controller
 
         $konfirmasi = DB::table('tbl_konfirmasi')->where('id_checkout',$id)->first();
         return view('pages.transaction.kirim',compact('notifWa','data','konfirmasi'));
+    }
+    public function terimaHewan($id,Request $reg){
+        if($reg->isMethod('post')){
+            $dataUpdate = CheckoutModel::where('id',$id)->update(['status'=>4]);
+        }
+        $notifWa = DB::table('tbl_message')->where('status','4')->first();
+        $notifWa = $notifWa->message;
+        $change = array('[no_transaksi]','[tgl]');
+
+        $data = CheckoutModel::leftJoin('tbl_hewan','tbl_hewan.id_hewan','=','tbl_checkout.id_hewan')
+        ->leftJoin('tbl_penjual','tbl_penjual.id_penjual','=','tbl_checkout.id_penjual')
+        ->where('id',$id)->first();
+
+        $new = array($data->no_transaksi,$reg->post('tgl_kirim'));
+        $notifWa = str_replace($change,$new,$notifWa);
+
+        $konfirmasi = DB::table('tbl_konfirmasi')->where('id_checkout',$id)->first();
+        return view('pages.checkout.terimahewan',compact('notifWa','data','konfirmasi'));
     }
     function invoiceNumber()
     {

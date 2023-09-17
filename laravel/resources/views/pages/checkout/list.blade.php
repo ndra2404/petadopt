@@ -1,7 +1,7 @@
 @extends("templates")
 @section("maincontent")
 @php
- $status = array('1'=>'waiting payment','2'=>'Waiting Verification payment'3=>'In Package');
+ $status = array('1'=>'waiting payment','2'=>'Waiting Verification payment',3=>'In Package',4=>'In Delivery');
 @endphp
 <section class="breadcumb py-120 bg-img" style="background-image: url(assets/images/thumbs/breadcumb-img.png);">
     <div class="container">
@@ -45,6 +45,9 @@
                 <td>
                     @if($type->status==1)
                         <a href="{{url('checkout-konfirmasi/'.$type->id)}}" class="btn btn-info">konfirmasi</a>
+                    @endif
+                    @if($type->status==4)
+                        <a href="{{url('checkout-terima/'.$type->id)}}" class="btn btn-info">Terima Barang</a>
                     @endif
                 </td>
             </tr>

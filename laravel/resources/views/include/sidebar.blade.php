@@ -15,8 +15,7 @@
         <li class="nav-item dropdown">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Transaction <span class="nav-item__icon"><i class="las la-angle-down"></i></span></a>
             <ul class="dropdown-menu style-two">
-            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('transaction')}}">New Order</a></li>
-            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('bank-setting')}}">Bank Setting</a></li>
+            <li class="dropdown-menu__list"><a class="dropdown-item dropdown-menu__link" href="{{url('transaction')}}">Order</a></li>
             </ul>
         </li>
         @endif

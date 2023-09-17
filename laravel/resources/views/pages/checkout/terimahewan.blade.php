@@ -2,7 +2,7 @@
 @section("maincontent")
 <div class="innerHeading-wrap">
   <div class="container">
-    <h1>Kirim Hewan</h1>
+    <h1>konfirmasi</h1>
   </div>
 </div>
 <!-- Inner Heading End -->
@@ -17,7 +17,7 @@
     <!-- Register Start -->
     <div class="container">
     <div class="col-md-12">
-        <form method="post" action="" enctype="multipart/form-data">
+        <form method="post" action="{{url('doKonfirmasi/'.$data->id)}}" enctype="multipart/form-data">
             @csrf
         <div class="row">
               <div class="col-lg-12">
@@ -45,7 +45,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                     <label>No Rekening </label>
-                    <input type="text"  name="no_rek" class="form-control" value="{{$konfirmasi->no_rekening}}">
+                    <input type="text"  name="no_rek" class="form-control">
                 </div>
                 </div>
                 <div class="col-lg-6">
@@ -56,20 +56,14 @@
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
-                    <label>Bukti bayar</label>
-                    <a href="{{url($konfirmasi->bukti_bayar)}}" class="form-control" target="_blank">Lihat bukti</a>
+                    <label>Tgl Kirim</label>
+                    <input type="text" name="nominal" value="{{$data->tgl_kirim}}" class="form-control" >
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="form-group">
                     <label>Notes</label>
                     <textarea class="form-control">{{$data->notes}}</textarea>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="form-group">
-                    <label>Tgl Kirim</label>
-                    <input type="date" required  name="tgl_kirim" class="form-control">
                 </div>
             </div>
         </div>
@@ -103,13 +97,10 @@
         </div>
         &nbsp;
             <div class="box-footer">
-                @if($data->status==3)
-                <button type="submit" class="btn btn-info pull-left">Kirim</button>
-                @endif
                 @if($data->status==4)
-                <a target='_blank'href="https://wa.me/{{$data->no_wa}}?text={{urlencode($notifWa)}} " class="btn btn-info pull-left">Kirim Whatapps</a>
+                <button type="submit" class="btn btn-info pull-left">Hewan diterima</button>
                 @endif
-                <a href="{{url('transaction')}}" class="btn btn-warning pull-right">Back</a>
+                <a href="{{url('checkout-list')}}" class="btn btn-warning pull-right">Back</a>
             </div>
         </form>
     </div>

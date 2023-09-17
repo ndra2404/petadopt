@@ -1,7 +1,7 @@
 @extends("templates")
 @section("maincontent")
 @php
- $status = array('1'=>'waiting payment','2'=>'Waiting Verification payment',3=>'Waiting Package');
+ $status = array('1'=>'waiting payment','2'=>'Waiting Verification payment',3=>'Waiting Package',4=>'In Delivery');
 @endphp
 <section class="breadcumb py-120 bg-img" style="background-image: url(assets/images/thumbs/breadcumb-img.png);">
     <div class="container">
