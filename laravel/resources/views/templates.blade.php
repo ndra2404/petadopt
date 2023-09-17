@@ -53,11 +53,6 @@
 <header class="header-two">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand " href="index.html">
-                <span class="logo">
-                    <img src="{{url('assets')}}/images/logo/h2-logo.png" alt="">
-                </span>
-            </a>
             <button class="navbar-toggler header-button style-two" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="hiddenNav"><i class="las la-bars"></i></span>
             </button>
@@ -202,7 +197,7 @@
                 <div class="col-xl-3 col-sm-6">
                     <div class="footer-item">
                         <div class="footer-item__logo">
-                            <a href="index.html"> <img src="assets/images/logo/h2-logo.png" alt=""></a>
+                            <a href="index.html"> <img src="{{url('assets')}}/images/logo/h2-logo.png" alt=""></a>
                         </div>
                         <p class="footer-item__desc"> Cahaya Petshop, Jl. Raya Dramaga, RT.01/RW.01, margajaya, Kec. Bogot Barat Kota Bogor, Jawa Barat 16680</p>
                         <ul class="social-list">
