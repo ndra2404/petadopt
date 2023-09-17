@@ -9,4 +9,5 @@ class AnimalModel extends Model
 {
     use HasFactory;
     protected $table= "tbl_hewan";
+    protected $primaryKey = 'id_hewan';
 }

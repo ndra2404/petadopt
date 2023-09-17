@@ -44,4 +44,48 @@ class AnimalController extends Controller
         $types = AnimalTypeModel::all();
         return view('pages.animal.add',compact('types'));
     }
+    public function update($id,Request $reg){
+
+        if($reg->isMethod('post')){
+            $destinationFoto = 'upload/foto';
+            $destinationVaccine = 'upload/vaccine';
+
+            $filefoto =$reg->file('foto');
+
+
+            $fileVaccine =$reg->file('bukti');
+
+
+            $animal = animalModel::find($id);
+            $animal->nama_hewan=$reg->input('nama_hewan');
+            $animal->id_type=$reg->input('type');
+            $animal->ras=$reg->input('ras');
+            $animal->jenis_kelamin=$reg->input('jenis');
+            $animal->rekam_medis=$reg->input('rekam_medis');
+            $animal->harga=$reg->input('harga');
+            if($filefoto){
+                $extension = $filefoto->getClientOriginalExtension();
+                $fileNamefoto= date('Ymdhis').'_foto'. '.' . $extension;
+                $filefoto->move($destinationFoto, $fileNamefoto);
+                $animal->foto=$fileNamefoto;
+            }
+            if($fileVaccine){
+                $extension = $fileVaccine->getClientOriginalExtension();
+                $fileNameVaccine= date('Ymdhis').'_foto'. '.' . $extension;
+                $fileVaccine->move($destinationVaccine, $fileNameVaccine);
+                $animal->bukti_vaksin=$fileNameVaccine;
+            }
+
+            $animal->update();
+            return redirect('animal');
+        }
+        $types = AnimalTypeModel::all();
+        $data = AnimalModel::where('id_hewan',$id)->first();
+        return view('pages.animal.update',compact('types','data'));
+    }
+    public function delete($id){
+        $post = AnimalModel::findOrFail($id);
+        $post->delete();
+        return redirect('animal');
+    }
 }

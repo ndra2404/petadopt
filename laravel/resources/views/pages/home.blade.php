@@ -38,18 +38,13 @@
             <div class=" col-xl-3 col-lg-3 col-sm-6 col-xsm-6">
                 <div class="product-item style-two">
                     <div class="product-item__thumb">
-                        <a href="product-two-details.html" class="product-item__thumb-link">
+                        <a href="#" class="product-item__thumb-link">
                            <img src="{{url('upload')}}/foto/{{$row->foto}}" alt="">
                         </a>
-                        <button class="product-item__icon">
-                            <span class="product-item__icon-style">
-                              <i class="las la-heart"></i>
-                            </span>
-                        </button>
                     </div>
                     <div class="product-item__content">
                       <h5 class="product-item__title">
-                        <a href="product-two-details.html" class="product-item__title-link">
+                        <a href="#" class="product-item__title-link">
                             {{$row->nama_hewan}}
                         </a>
                       </h5>

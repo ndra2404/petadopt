@@ -39,6 +39,8 @@ Route::get('user', [MasterDataController::class, 'user'])->name('masterData.user
 //animal
 Route::get('animal', [MasterDataController::class, 'animal'])->name('masterData.animal');
 Route::any('animal/create', [AnimalController::class, 'create'])->name('animal.create');
+Route::any('animal/update/{id}', [AnimalController::class, 'update'])->name('animal.update');
+Route::any('animal/delete/{id}', [AnimalController::class, 'delete'])->name('animal.delete');
 
 //animalType
 Route::get('animalType', [MasterDataController::class, 'animalType'])->name('masterData.animalType');
