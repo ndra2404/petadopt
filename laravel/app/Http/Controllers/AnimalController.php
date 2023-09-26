@@ -23,7 +23,7 @@ class AnimalController extends Controller
 
             $fileVaccine =$reg->file('bukti');
             $extension = $fileVaccine->getClientOriginalExtension();
-            $fileNameVaccine= date('Ymdhis').'_foto'. '.' . $extension;
+            $fileNameVaccine= date('Ymdhis').'_vaccine'. '.' . $extension;
             $fileVaccine->move($destinationVaccine, $fileNameVaccine);
 
             $animal = new animalModel();
@@ -71,7 +71,7 @@ class AnimalController extends Controller
             }
             if($fileVaccine){
                 $extension = $fileVaccine->getClientOriginalExtension();
-                $fileNameVaccine= date('Ymdhis').'_foto'. '.' . $extension;
+                $fileNameVaccine= date('Ymdhis').'_vaccine'. '.' . $extension;
                 $fileVaccine->move($destinationVaccine, $fileNameVaccine);
                 $animal->bukti_vaksin=$fileNameVaccine;
             }

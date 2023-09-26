@@ -59,13 +59,13 @@ class LoginController extends Controller
             $dataPenjual->id_user = $user->id;
             $dataPenjual->save();
             DB::commit();
-            return redirect('register')
+            return redirect('registration')
                 ->with([
                     'status'=>'alert-success',
                     'message' => 'Pendaftaran berhasil silahkan login',
                 ]);
         } catch (\Exception $th) {
-            return redirect('register')
+            return redirect('registration')
                 ->with([
                     'status'=>'alert-danger',
                     'message' => $th->getMessage(),
@@ -92,13 +92,14 @@ class LoginController extends Controller
             $dataPenjual->id_user = $user->id;
             $dataPenjual->save();
             DB::commit();
-            return redirect('register')
+            return redirect('registration')
                 ->with([
                     'status'=>'alert-success',
                     'message' => 'Pendaftaran berhasil silahkan login',
                 ]);
         } catch (\Exception $th) {
-            return redirect('register')
+
+            return redirect('registration')
                 ->with([
                     'status'=>'alert-danger',
                     'message' => $th->getMessage(),
