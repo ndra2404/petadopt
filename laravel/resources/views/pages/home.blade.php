@@ -7,7 +7,7 @@
                 <div class="banner-two-content">
                     <h3 class="banner-two-content__subtitle">Save 20 -30% Off</h3>
                     <h1 class="banner-two-content__title">Everything your pet need</h1>
-                    <a href="product-category.html" class="btn btn--base-two pill">SHOP NOW</a>
+
                 </div>
             </div>
             <div class="col-md-6 d-md-block d-none">

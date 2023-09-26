@@ -10,7 +10,7 @@
                 <div class="breadcumb__wrapper">
                     <h1 class="breadcumb__title"> Transaction</h1>
                     <ul class="breadcumb__list">
-                        <li class="breadcumb__item"><a href="index.html" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
+                        <li class="breadcumb__item"><a href="{{url('')}}" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
                         <li class="breadcumb__item"> / </li>
                         <li class="breadcumb__item"> <span class="breadcumb__item-text"> List Order </span> </li>
                     </ul>

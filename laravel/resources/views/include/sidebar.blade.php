@@ -31,8 +31,5 @@
         <li class="nav-item dropdown">
             <a class="nav-link" aria-current="page" href="{{url('listAnimal')}}">Animal</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="about.html">About</a>
-        </li>
     </ul>
 </div>

@@ -51,7 +51,7 @@
 <header class="header-two">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand " href="index.html">
+            <a class="navbar-brand " href="{{url('')}}">
                 <span class="logo">
                     <img src="{{url('assets')}}/images/logo/h2-logo.png" alt="">
                 </span>
@@ -106,7 +106,7 @@
                 <div class="breadcumb__wrapper">
                     <h1 class="breadcumb__title"> Registrasi</h1>
                     <ul class="breadcumb__list">
-                        <li class="breadcumb__item"><a href="index.html" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
+                        <li class="breadcumb__item"><a href="{{url('')}}" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
                         <li class="breadcumb__item"> / </li>
                         <li class="breadcumb__item"> <span class="breadcumb__item-text"> Login </span> </li>
                     </ul>

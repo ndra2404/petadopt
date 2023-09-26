@@ -7,7 +7,7 @@
                 <div class="breadcumb__wrapper">
                     <h1 class="breadcumb__title"> Animal</h1>
                     <ul class="breadcumb__list">
-                        <li class="breadcumb__item"><a href="index.html" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
+                        <li class="breadcumb__item"><a href="{{url('')}}" class="breadcumb__link"> <i class="las la-home"></i> Home</a> </li>
                         <li class="breadcumb__item"> / </li>
                         <li class="breadcumb__item"> <span class="breadcumb__item-text"> Animal </span> </li>
                     </ul>
@@ -25,7 +25,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xsm-6">
                         <div class="product-item">
                             <div class="product-item__thumb">
-                                <a href="product-two-details.html" class="product-item__thumb-link">
+                                <a href="#" class="product-item__thumb-link">
                                    <img src="{{url('upload/foto/'.$row->foto)}}" alt="">
                                 </a>
                                 <button class="product-item__icon">
