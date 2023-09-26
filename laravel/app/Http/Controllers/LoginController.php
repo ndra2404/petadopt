@@ -47,6 +47,13 @@ class LoginController extends Controller
                 'level'=>2,
                 'status'=>1
             );
+            if($cek){
+                return redirect('registration')
+                ->with([
+                    'status'=>'alert-success',
+                    'message' => 'Akun sudah ada silahkan login',
+                ]);
+            }
             $user = User::create($dataUser);
 
             $dataPenjual = new PenjualModel();
@@ -83,6 +90,14 @@ class LoginController extends Controller
                 'level'=>3,
                 'status'=>1
             );
+            $cek = User::where('username',$request->input('email'))->first();
+            if($cek){
+                return redirect('registration')
+                ->with([
+                    'status'=>'alert-success',
+                    'message' => 'Akun sudah ada silahkan login',
+                ]);
+            }
             $user = User::create($dataUser);
 
             $dataPenjual = new PembeliModel();
