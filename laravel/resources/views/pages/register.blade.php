@@ -167,7 +167,7 @@
                                 <div class="col-sm-12">
                                     <label for="your-password" class="form--label">Password</label>
                                     <div class="form-group">
-                                        <input id="your-password" name="password" type="password" class="form-control form--control" value="Password">
+                                        <input id="your-password" name="password" type="password" class="form-control form--control" value="">
                                         <div class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></div>
                                     </div>
                                 </div>
