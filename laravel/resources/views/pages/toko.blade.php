@@ -162,7 +162,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="email" class="form--label">Email Address</label>
-                                        <input type="text" class="form--control" id="email" placeholder="Email Address">
+                                        <input type="text" name="email" class="form--control" id="email" placeholder="Email Address">
                                      </div>
                                 </div>
                                 <div class="col-sm-12">
@@ -174,7 +174,7 @@
                                 <div class="col-sm-12">
                                     <label for="your-password" class="form--label">Password</label>
                                     <div class="form-group">
-                                        <input id="your-password" name="email" type="password" class="form-control form--control" value="Password">
+                                        <input id="your-password" name="password" type="password" class="form-control form--control" value="Password">
                                         <div class="password-show-hide fas fa-eye toggle-password fa-eye-slash" id="#your-password"></div>
                                     </div>
                                 </div>
