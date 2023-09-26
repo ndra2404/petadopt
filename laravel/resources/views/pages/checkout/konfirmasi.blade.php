@@ -45,7 +45,7 @@
               <div class="col-lg-6">
                 <div class="form-group">
                     <label>No Rekening </label>
-                    <input type="text"  name="no_rek" class="form-control">
+                    <input type="text" maxLength="25"  name="no_rek" class="form-control">
                 </div>
                 </div>
                 <div class="col-lg-6">
