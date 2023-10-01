@@ -22,7 +22,7 @@
                 <td>{{$row->ras}}</td>
                 <td>{{$row->jenis_kelamin}}</td>
                 <td><img width="80" src="{{url('upload/foto/'.$row->foto)}}" /></td>
-                <td><img width="80" src="{{url('upload/foto/'.$row->bukti_vaksin)}}" /></td>
+                <td><img width="80" src="{{url('upload/vaccine/'.$row->bukti_vaksin)}}" /></td>
                 <td>
                     <a href="{{url('animal/update/'.$row->id_hewan)}}" class="btn btn-info btn-sm">Update</a>
                     <a href="{{url('animal/delete/'.$row->id_hewan)}}" class="btn btn-danger btn-sm">Delete</a>
