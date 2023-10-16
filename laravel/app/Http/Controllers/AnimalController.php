@@ -29,6 +29,7 @@ class AnimalController extends Controller
             $animal = new animalModel();
             $animal->nama_hewan=$reg->input('nama_hewan');
             $animal->id_type=$reg->input('type');
+            $animal->deskripsi=$reg->input('penjelasan');
             $animal->ras=$reg->input('ras');
             $animal->jenis_kelamin=$reg->input('jenis');
             $animal->rekam_medis=$reg->input('rekam_medis');
@@ -63,6 +64,7 @@ class AnimalController extends Controller
             $animal->jenis_kelamin=$reg->input('jenis');
             $animal->rekam_medis=$reg->input('rekam_medis');
             $animal->harga=$reg->input('harga');
+            $animal->deskripsi=$reg->input('penjelasan');
             if($filefoto){
                 $extension = $filefoto->getClientOriginalExtension();
                 $fileNamefoto= date('Ymdhis').'_foto'. '.' . $extension;

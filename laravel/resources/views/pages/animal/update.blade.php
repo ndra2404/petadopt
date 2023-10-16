@@ -34,6 +34,10 @@
     <label for="exampleFormControlTextarea1">rekam_medis</label>
     <textarea class="form-control" required name="rekam_medis" id="exampleFormControlTextarea1" rows="3">{{$data->rekam_medis}}</textarea>
   </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Penjelasan</label>
+    <textarea class="form-control" required name="penjelasan" id="exampleFormControlTextarea1" rows="3">{{$data->deskripsi}}</textarea>
+  </div>
   <div class="row">
         <div class="col-md-6">
             <div class="form-group">

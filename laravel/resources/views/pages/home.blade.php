@@ -51,7 +51,7 @@
                       <h6 class="product-item__price">
                       Rp. {{number_format($row->harga)}}
                       </h6>
-                       <a href="{{url('checkout/'.$row->id_hewan)}}" class="btn btn--base-two pill btn--sm">Checkout</a>
+                       <a href="{{url('checkout/'.$row->id_hewan)}}" class="btn btn--base-two pill btn--sm">Adopsi</a>
                     </div>
                 </div>
             </div>

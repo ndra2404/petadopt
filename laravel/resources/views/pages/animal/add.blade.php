@@ -35,6 +35,10 @@
     <textarea class="form-control" required name="rekam_medis" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Penjelasan</label>
+    <textarea class="form-control" required name="penjelasan" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group">
     <label for="exampleFormControlInput1">Foto</label>
     <input type="file" name="foto" required class="form-control" id="exampleFormControlInput1" >
   </div>
