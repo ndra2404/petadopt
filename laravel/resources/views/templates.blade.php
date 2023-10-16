@@ -175,6 +175,16 @@
         </div>
     </div>
 </div>
+<div class="add-two-section pt-60">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                    <img src="{{url('assets')}}/images/alur.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- ===========add two section end here =========-->
