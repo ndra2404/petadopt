@@ -9,6 +9,7 @@ use App\Models\PembeliModel;
 use App\Models\CheckoutModel;
 use App\Models\PenjualModel;
 use App\Models\KonfirmasiModel;
+use App\Models\AnimalModel;
 
 
 class CheckoutController extends Controller
@@ -33,7 +34,7 @@ class CheckoutController extends Controller
         $data = CheckoutModel::leftJoin('tbl_hewan','tbl_hewan.id_hewan','=','tbl_checkout.id_hewan')
         ->leftJoin('tbl_penjual','tbl_penjual.id_penjual','=','tbl_checkout.id_penjual')
         ->where('id',$id)->first();
-        
+
         return view('pages.checkout.konfirmasi',compact('data'));
     }
     public function doKonfirmasi(REQUEST $reg,$id){
@@ -170,5 +171,13 @@ class CheckoutController extends Controller
 
         $string = preg_replace("/[^0-9\.]/", '',$latest->no_transaksi);
         return 'TRA' . sprintf('%04d', $string+1);
+    }
+    function detail(Request $reg,$id){
+        $animal = AnimalModel::where('id_hewan',$id)->first();
+        return view('pages.animal.detail',compact('animal'));
+    }
+    function blog(Request $reg,$id){
+        $blog = DB::table('tbl_blog')->where('id',$id)->first();
+        return view('pages.blog.detail',compact('blog'));
     }
 }

@@ -53,12 +53,19 @@
 <header class="header-two">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand " href="index.html">
+                <span class="logo">
+                    <img src="{{url('assets')}}/images/logo/h2-logo.png" alt="">
+                </span>
+            </a>
             <button class="navbar-toggler header-button style-two" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span id="hiddenNav"><i class="las la-bars"></i></span>
             </button>
             @include("include.sidebar")
             <div class="header-info style-two">
-
+            <div class="toggle-search-box style-two">
+                    <button type="button" class="toggle-button style-two" data-bs-toggle="modal" data-bs-target="#search-box" data-bs-whatever="@mdo"><i class="las la-search"></i></button>
+                </div>
               <div class="header-info__user">
                 @auth
                 <a href="{{url('doLogout')}}" class="header-info__link"><i class="far fa-user"></i></a>
@@ -82,12 +89,12 @@
                     <button type="button" class="search-overlay-close" data-bs-dismiss="modal" aria-label="Close"><i class="las la-times"></i></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="{{url('listAnimal')}}" method="get">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="search-box">
                                     <div class="input--group">
-                                        <input type="text" class="form--control style-two" placeholder="Search....">
+                                        <input type="text" name="tipe" class="form--control style-two" placeholder="Search....">
                                         <button class="search-btn" type="submit"><i class="las la-search"></i></button>
                                     </div>
                                 </div>
@@ -104,87 +111,8 @@
     @yield('maincontent')
 <!--====================banner-two section start here======================-->
 
-
-<!-- ======================news post section end here============-->
-<div class="feature-two-section py-60">
-    <div class="container">
-        <div class="row gy-4 ">
-            <div class="col-md-3 col-sm-6 col-xxsm-6">
-                <div class="feature-item style-two">
-                    <div class="feature-item__thumb">
-                        <img src="{{url('assets')}}/images/icons/ft-img01.png" alt="">
-                    </div>
-                    <div class="feature-item__info">
-                        <h5 class="feature-item__title">
-                            FREE SHIPPING
-                        </h5>
-                        <span class="feature-item__payment"> For All Order Over $99 </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xxsm-6">
-                <div class="feature-item style-two">
-                    <div class="feature-item__thumb">
-                        <img src="{{url('assets')}}/images/icons/ft-img02.png" alt="">
-                    </div>
-                    <div class="feature-item__info">
-                        <h5 class="feature-item__title">
-                            FRIENDLY SUPPORT
-                        </h5>
-                        <span class="feature-item__payment"> 24/7 Customer Support </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xxsm-6">
-                <div class="feature-item style-two">
-                    <div class="feature-item__thumb">
-                        <img src="{{url('assets')}}/images/icons/ft-img03.png" alt="">
-                    </div>
-                    <div class="feature-item__info">
-                        <h5 class="feature-item__title">
-                            SECURE PAYMENT
-                        </h5>
-                        <span class="feature-item__payment">100%  Secure Payment</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xxsm-6">
-                <div class="feature-item style-two">
-                    <div class="feature-item__thumb">
-                        <img src="{{url('assets')}}/images/icons/ft-img04.png" alt="">
-                    </div>
-                    <div class="feature-item__info">
-                        <h5 class="feature-item__title">
-                            SHIPPING & RETURN
-                        </h5>
-                        <span class="feature-item__payment"> within 30days For Refund </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- ===========add two section start here =========-->
-<div class="add-two-section pt-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
 
-                    <img src="{{url('assets')}}/images/thumbs/add-two01.png" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="add-two-section pt-60">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-
-                    <img src="{{url('assets')}}/images/alur.jpg" alt="">
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <!-- ===========add two section end here =========-->

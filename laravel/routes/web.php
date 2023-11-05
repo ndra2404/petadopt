@@ -27,6 +27,8 @@ Route::post('doRegister', [LoginController::class, 'doRegister'])->name('create.
 Route::post('doAdopsi', [LoginController::class, 'doAdopsi'])->name('create.doAdopsi');
 Route::post('doLogin', [LoginController::class, 'doLogin'])->name('create.dologin');
 Route::get('/', [HomeController::class, 'home'])->name('');
+Route::any('detail/{id}', [CheckoutController::class, 'detail'])->name('transaction.detail');
+Route::any('blog/{id}', [CheckoutController::class, 'blog'])->name('transaction.blog');
 
 Route::group(['middleware' => ['auth']], function () {
 
@@ -58,4 +60,6 @@ Route::get('transaction', [CheckoutController::class, 'transaction'])->name('tra
 Route::any('checkout-verification/{id}', [CheckoutController::class, 'verification'])->name('transaction.verification');
 Route::any('checkout-send/{id}', [CheckoutController::class, 'kirimHewan'])->name('transaction.kirimhewan');
 Route::any('checkout-terima/{id}', [CheckoutController::class, 'terimaHewan'])->name('transaction.terimaHewan');
+
+
 });

@@ -1,4 +1,5 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav nav-menu m-auto style-two">
         <li class="nav-item dropdown">
             <a class="nav-link" aria-current="page" href="{{url('')}}">Home</a>
