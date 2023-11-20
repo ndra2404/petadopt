@@ -149,7 +149,7 @@
                                 <div class="col-sm-6">
                                      <div class="form-group">
                                         <label for="username" class="form--label">No Wa(+62)</label>
-                                        <input type="text" class="form--control" id="username" name="no_wa" placeholder="User Name">
+                                        <input type="text" class="form--control" id="username" name="no_wa" placeholder="NO wa">
                                      </div>
                                 </div>
                                 <div class="col-sm-12">

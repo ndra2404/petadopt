@@ -15,14 +15,14 @@
       </div>
 @endif
     <!-- Register Start -->
-    <div class="container">
+    <div class="container" style="margin-bottom:30px">
     <div class="col-md-12">
         <form method="post" action="{{url('doKonfirmasi/'.$data->id)}}" enctype="multipart/form-data">
             @csrf
         <div class="row">
               <div class="col-lg-12">
                 <div class="form-group">
-                    <label>Nomor Pendaftaran</label>
+                    <label>Nomor Transaksi</label>
                     <span class="form-control">{{$data->no_transaksi}}</span>
                 </div>
                 </div>

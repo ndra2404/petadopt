@@ -144,19 +144,19 @@
                                 <div class="col-sm-6">
                                      <div class="form-group">
                                         <label for="username" class="form--label">No Wa(+62)</label>
-                                        <input type="text" class="form--control" id="username" name="no_wa" placeholder="User Name">
+                                        <input type="text" class="form--control" id="username" name="no_wa" placeholder="No wa">
                                      </div>
                                 </div>
                                 <div class="col-sm-6">
                                      <div class="form-group">
                                         <label for="username" class="form--label">No Rek</label>
-                                        <input type="text" class="form--control" id="username" name="no_rek" placeholder="User Name">
+                                        <input type="text" class="form--control" id="username" name="no_rek" placeholder="No rek">
                                      </div>
                                 </div>
                                 <div class="col-sm-6">
                                      <div class="form-group">
                                         <label for="username" class="form--label">Nama Rekening</label>
-                                        <input type="text" class="form--control" id="username" name="no_rek_nama" placeholder="User Name">
+                                        <input type="text" class="form--control" id="username" name="no_rek_nama" placeholder="Nama Rekening">
                                      </div>
                                 </div>
                                 <div class="col-sm-12">

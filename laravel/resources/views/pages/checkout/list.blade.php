@@ -20,7 +20,7 @@
     </div>
 </section>
 <div class="container">
-<table class="table" style="margin-top:20px">
+<table class="table" style="margin-top:20px;margin-bottom:20px">
         <tr>
             <th>No</th>
             <th>No Transaksi</th>

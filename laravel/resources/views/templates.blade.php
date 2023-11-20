@@ -119,7 +119,7 @@
 
 
 <!-- ========footer===== -->
-<footer class="footer-two-area">
+<footer class="footer-two-area" style="margin-top:30px">
     <div class="footer-two__top-shape">
         <img src="{{url('assets')}}/images/shapes/footer-top-shape.png" alt="">
     </div>

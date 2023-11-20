@@ -25,7 +25,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xsm-6">
                         <div class="product-item">
                             <div class="product-item__thumb">
-                                <a href="#" class="product-item__thumb-link">
+                                <a href="{{url('detail/'.$row->id_hewan)}}" class="product-item__thumb-link">
                                    <img src="{{url('upload/foto/'.$row->foto)}}" alt="">
                                 </a>
                                 <button class="product-item__icon">
@@ -45,7 +45,7 @@
                             <h6 class="product-item__price">
                             Rp. {{number_format($row->harga)}}
                             </h6>
-                            <a href="{{url('checkout/'.$row->id_hewan)}}" class="btn btn--base pill btn--sm">Checkout</a>
+                            <a href="{{url('checkout/'.$row->id_hewan)}}" class="btn btn--base pill btn--sm">Adopsi</a>
                         </div>
                         </div>
                     </div>

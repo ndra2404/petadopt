@@ -153,6 +153,7 @@ class CheckoutController extends Controller
         $change = array('[no_transaksi]','[tgl]');
 
         $data = CheckoutModel::leftJoin('tbl_hewan','tbl_hewan.id_hewan','=','tbl_checkout.id_hewan')
+        ->select('tbl_checkout.*','tbl_hewan.*')
         ->leftJoin('tbl_penjual','tbl_penjual.id_penjual','=','tbl_checkout.id_penjual')
         ->where('id',$id)->first();
 
