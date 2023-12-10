@@ -33,8 +33,8 @@ class CheckoutController extends Controller
     public function konfirmasi($id){
         $data = CheckoutModel::leftJoin('tbl_hewan','tbl_hewan.id_hewan','=','tbl_checkout.id_hewan')
         ->leftJoin('tbl_penjual','tbl_penjual.id_penjual','=','tbl_checkout.id_penjual')
+        ->select('tbl_checkout.*','nama_hewan','harga')
         ->where('id',$id)->first();
-
         return view('pages.checkout.konfirmasi',compact('data'));
     }
     public function doKonfirmasi(REQUEST $reg,$id){

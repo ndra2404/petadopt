@@ -34,7 +34,7 @@
         </tr>
         @foreach($checkout as $type)
             <tr>
-                <td>{{$loop->index+1}}</td>
+                <td style="width:5%">{{$loop->index+1}}0</td>
                 <td>{{$type->no_transaksi}}</td>
                 <td>{{$type->tgl_checkout}}</td>
                 <td>{{$type->nama_hewan}}</td>

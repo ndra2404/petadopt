@@ -71,7 +71,7 @@
               <div class="col-lg-12">
                 <table class="table">
                     <tr>
-                        <th width="10">No</th>
+                        <th width="40">No</th>
                         <th style="text-align:center">Item</th>
                         <th style="text-align:right">Price</th>
                     </tr>

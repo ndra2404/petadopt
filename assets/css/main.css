@@ -2659,7 +2659,6 @@ input[type=number] {
 .table tbody tr td {
     text-align: center;
     vertical-align: middle;
-    padding: 20px;
     border-width: 1px;
     border: 0;
     font-family: var(--heading-font);
@@ -8307,10 +8306,10 @@ input[type=number] {
 .product-style__title {
     font-size: 18px;
     color: hsl(var(--black)/0.9);
-    margin-right: 55px;
+    margin-right: 10px;
     font-weight: 400;
     font-family: var(--body-font);
-    width: 70px;
+    width: 110px;
 }
 
 .product-style__size {

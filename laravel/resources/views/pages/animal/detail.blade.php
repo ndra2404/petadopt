@@ -62,12 +62,16 @@
                  Rp. {{number_format($animal->harga)}}
                  </h6>
                  <div class="product-style">
-                    <span class="product-style__title">Jenis kelamin :</span>
-                   <span class="product-style__size">{{$animal->jenis_kelamin}}</span>
+                    <span class="product-style__size">Jenis Kelamin<br>{{$animal->jenis_kelamin}}</span>
                  </div>
                  <div class="product-style">
-                  <span class="product-style__title">Ras :</span>
-                 <span class="product-style__size">{{$animal->ras}}</span>
+                 <span class="product-style__size">Ras<br>{{$animal->ras}}</span>
+                 </div>
+                 <div class="product-style">
+                 <span class="product-style__size">Deskripsi<br>{{$animal->deskripsi}}</span>
+                 </div>
+                 <div class="product-style">
+                 <span class="product-style__size">Deskripsi<br>{{$animal->rekam_medis}}</span>
                  </div>
                  <div class="product-info__button">
                     <a href="{{url('checkout/'.$animal->id_hewan)}}" class="btn btn--base-two pill btn--sm">Adopsi</a>
@@ -76,34 +80,5 @@
             </div>
         </div>
     </div>
-</div>
-
-<!-- ======================product details two section end here ====================-->
-
-<!-- =====================tab section start here ========================-->
-<div class="tab-section pb-120">
-   <div class="container">
-    <ul class="nav nav-pills mb-3 custom--tab" id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Deskripsi</button>
-      </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Rekam Medis</button>
-      </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-        <p class="tab-desc">
-        {{$animal->deskripsi}}
-        </p>
-      </div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-        <p class="tab-desc">
-        {{$animal->rekam_medis}}
-        </p>
-      </div>
-    </div>
-
-   </div>
 </div>
 @endsection
