@@ -37,6 +37,28 @@ class CheckoutController extends Controller
         ->where('id',$id)->first();
         return view('pages.checkout.konfirmasi',compact('data'));
     }
+    public function doTerima(REQUEST $reg,$id){
+        $destinationPath = 'upload/pembayaran';
+        if($reg->isMethod('post')){
+            $no_pendaftaran = CheckoutModel::where('id',$id)->firstOrFail();
+            if($no_pendaftaran){
+                CheckoutModel::where('id',$id)->update([
+                'status'=>'5'
+            ]);
+                return redirect('checkout-terima/'.$id)
+                ->with([
+                    'status'=>'alert-success',
+                    'message' => 'Konfirmasi terima berhasil',
+                ]);
+            }else{
+                redirect('checkout-konfirmasi/'.$id)
+                ->with([
+                    'status'=>'alert-danger',
+                    'message' => 'Konfirmasi terima gagal',
+                ]);
+            }
+        }
+    }
     public function doKonfirmasi(REQUEST $reg,$id){
         $destinationPath = 'upload/pembayaran';
         if($reg->isMethod('post')){

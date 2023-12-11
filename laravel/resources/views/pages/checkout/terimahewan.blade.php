@@ -17,7 +17,7 @@
     <!-- Register Start -->
     <div class="container" style="margin-bottom:30px">
     <div class="col-md-12">
-        <form method="post" action="{{url('doKonfirmasi/'.$data->id)}}" enctype="multipart/form-data">
+        <form method="post" action="{{url('doTerima/'.$data->id)}}" enctype="multipart/form-data">
             @csrf
         <div class="row">
               <div class="col-lg-12">

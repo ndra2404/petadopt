@@ -55,6 +55,7 @@ Route::post('doCheckout', [CheckoutController::class, 'doCheckout'])->name('chec
 Route::get('checkout-list', [CheckoutController::class, 'list'])->name('checkout.list');
 Route::get('checkout-konfirmasi/{id}', [CheckoutController::class, 'konfirmasi'])->name('checkout.konfirmasi');
 Route::post('doKonfirmasi/{id}', [CheckoutController::class, 'doKonfirmasi'])->name('checkout.doKonfirmasi');
+Route::post('doTerima/{id}', [CheckoutController::class, 'doTerima'])->name('checkout.doTerima');
 
 Route::get('transaction', [CheckoutController::class, 'transaction'])->name('transaction');
 Route::any('checkout-verification/{id}', [CheckoutController::class, 'verification'])->name('transaction.verification');
